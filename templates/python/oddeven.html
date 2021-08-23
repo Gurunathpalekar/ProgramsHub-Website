@@ -1,0 +1,81 @@
+
+{% extends 'base.html' %}
+
+
+{% block title %} Program to Check if a Number is Odd or Even {% endblock %}
+{% block body%}
+<div class="container">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6">
+  <br>
+  <div class="list-group" style="max-width: 380px;">
+  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+    Python Example
+  </a>
+ <a href="{% url 'py' %}" class="list-group-item list-group-item-action">Print Hello world!</a>
+  <a href="{% url 'first' %}" class="list-group-item list-group-item-action">Add Two Numbers</a>
+  <a href="{% url 'addnum' %}"class="list-group-item list-group-item-action">Add Two Numbers With User Input</a>
+  <a href="{% url 'swap' %}" class="list-group-item list-group-item-action">Swap Two Variables</a>
+  <a href="{% url 'randomnum' %}" class="list-group-item list-group-item-action">Generate a Random Number</a>
+  <a href="{% url 'factno' %}" class="list-group-item list-group-item-action">Find the Factorial of a Number</a>
+  <a href="{% url 'prime' %}" class="list-group-item list-group-item-action">Check Prime Number</a>
+  <a href="{% url 'primeno' %}" class="list-group-item list-group-item-action">Print all Prime Numbers in an Interval</a>
+  <a href="{% url 'divi' %}" class="list-group-item list-group-item-action">Find Numbers Divisible by Another Number</a>
+  <a href="{% url 'ascii' %}" class="list-group-item list-group-item-action">Find ASCII Value of Character</a>
+  <a href="{% url 'areatri' %}" class="list-group-item list-group-item-action">Calculate the Area of a Triangle</a>
+  <a href="{% url 'armstrongnum' %}" class="list-group-item list-group-item-action">Check Armstrong Number</a>
+  <a href="{% url 'celsius' %}"class="list-group-item list-group-item-action">convert Celsuis to Fahrenheit</a>
+  <a href="{% url 'dectobin' %}" class="list-group-item list-group-item-action">Decimal to Binary, Octal and Hexadecimal</a>
+  <a href="{% url 'fib' %}" class="list-group-item list-group-item-action">Print the Fibonacci sequence</a>
+  <a href="{% url 'fpyramid' %}" class="list-group-item list-group-item-action">print full pyramid a using numbers</a>
+  <a href="{% url 'hpyaramid' %}" class="list-group-item list-group-item-action">print half pyramid using *</a>
+  <a href="{% url 'kmtomi' %}" class="list-group-item list-group-item-action">Program to Convert Kilometers to Miles!</a>
+  <a href="{% url 'oddeven' %}" class="list-group-item list-group-item-action">Program to Check if a Number is Odd or Even</a>
+  <a href="{% url 'palindrome' %}" class="list-group-item list-group-item-action">Check Whether a String is Palindrome or Not</a>
+  <a href="{% url 'sortwords' %}" class="list-group-item list-group-item-action">Sort Words in Alphabetic Order</a>
+</div>
+    </div>
+<div class="col-lg-6">
+  <br>
+  <h2>Python Program to Check if a Number is Odd or Even</h2>
+<br>
+In this example, you will learn to check whether a number entered by the user is even or odd.
+    <div class="container- p-5 my-5 border" style="background-color:powderblue">
+      <strong>
+        Source code
+      </strong>
+      <br>
+      <code>
+        # Python program to check if the input number is odd or even.<br>
+        # A number is even if division by 2 gives a remainder of 0.<br>
+        # If the remainder is 1, it is an odd number.<br>
+        
+        num = int(input("Enter a number: "))<br>
+        if (num % 2) == 0:<br>
+           print("{0} is Even".format(num))<br>
+        else:<br>
+           print("{0} is Odd".format(num))<br>
+
+      </code>
+      <br>
+      <br>
+  <strong>Output</strong>
+      <br>
+      <code>
+        Output 1:<br>
+        Enter a number: 43<br>
+        43 is Odd<br>
+        Output 2:<br>
+        Enter a number: 18<br>
+        18 is Even<br>
+      </code>
+</div>
+In this program, we ask the user for the input and check if the number is odd or even. Please note that { } is a replacement field for num.
+</div>
+</div>
+</div>
+</div><br><br>
+</div>
+
+{% endblock %}

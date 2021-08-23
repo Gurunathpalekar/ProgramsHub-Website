@@ -1,0 +1,94 @@
+
+{% extends 'base.html' %}
+
+
+{% block title %} Check Leap Year {% endblock %}
+{% block body%}
+<div class="container">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6">
+  <br>
+  <div class="list-group" style="max-width: 380px;">
+  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+    C Example
+  </a>
+ <a href="{% url 'c' %}" class="list-group-item list-group-item-action">Print Hello world!</a>
+  <a href="{% url 'cadd' %}" class="list-group-item list-group-item-action">Add Two Numbers</a>
+  <a href="{% url 'cprint' %}"class="list-group-item list-group-item-action">Print an Integer</a>
+  <a href="{% url 'cswap' %}" class="list-group-item list-group-item-action">Swap Two Variables</a>
+  <a href="{% url 'cleap' %}" class="list-group-item list-group-item-action">Check Leap Year</a>
+  <a href="{% url 'cfactno' %}" class="list-group-item list-group-item-action">Find the Factorial of a Number</a>
+  <a href="{% url 'cprime' %}" class="list-group-item list-group-item-action">Check Prime Number</a>
+  <a href="{% url 'creverse' %}" class="list-group-item list-group-item-action">Reverse a Number</a>
+  <a href="{% url 'cpower' %}" class="list-group-item list-group-item-action">Power of Number</a>
+  <a href="{% url 'cascii' %}" class="list-group-item list-group-item-action">Find ASCII Value of Character</a>
+  <a href="{% url 'ceveorodd' %}" class="list-group-item list-group-item-action">Check Whether a Number is Even or Odd</a>
+  <a href="{% url 'cvoworcon' %}" class="list-group-item list-group-item-action">Check Whether a Character is a Vowel or Consonant</a>
+  <a href="{% url 'clarnum' %}" class="list-group-item list-group-item-action">Find the Largest Number Among Three Numbers</a>
+  <a href="{% url 'croot' %}" class="list-group-item list-group-item-action"> Find the Roots of a Quadratic Equation</a>
+  <a href="{% url 'cposorneg' %}" class="list-group-item list-group-item-action">Check Whether a Number is Positive or Negative </a>
+  <a href="{% url 'csumnatnum' %}" class="list-group-item list-group-item-action">Calculate the Sum of Natural Numbers</a>
+  <a href="{% url 'cmultable' %}" class="list-group-item list-group-item-action">Generate Multiplication Table</a>
+  <a href="{% url 'cfibo' %}" class="list-group-item list-group-item-action">Display Fibonacci Sequence</a>
+  <a href="{% url 'cgcd' %}" class="list-group-item list-group-item-action">Find GCD of two Numbers</a>
+  <a href="{% url 'clcm' %}" class="list-group-item list-group-item-action">Find LCM of two Numbers</a>
+  <a href="{% url 'cpal' %}" class="list-group-item list-group-item-action">Check Whether a Number is Palindrome or Not</a>
+</div>
+    </div>
+<div class="col-lg-6">
+  <br>
+  <h2>C Program to Check Leap Year</h2>
+<br>
+ In this example, you will learn to check whether the year entered by the user is a leap year or not.
+    <div class="container- p-5 my-5 border" style="background-color:powderblue">
+      <strong>
+        Source code
+      </strong>
+      <br>
+      <code>
+     #include <stdio.h><br>
+int main() {<br>
+   int year;<br>
+   printf("Enter a year: ");<br>
+   scanf("%d", &year);<br>
+
+   // leap year if perfectly divisible by 400<br>
+   if (year % 400 == 0) {<br>
+      printf("%d is a leap year.", year);<br>
+   }<br>
+   // not a leap year if divisible by 100<br>
+   // but not divisible by 400<br>
+   else if (year % 100 == 0) {<br>
+      printf("%d is not a leap year.", year);<br>
+   }<br>
+   // leap year if not divisible by 100<br>
+   // but divisible by 4<br>
+   else if (year % 4 == 0) {<br>
+      printf("%d is a leap year.", year);<br>
+   }<br>
+   // all other years are not leap years<br>
+   else {<br>
+      printf("%d is not a leap year.", year);<br>
+   }<br>
+
+   return 0;<br>
+}<br>
+      </code>
+      <br>
+      <br>
+  <strong>Output</strong>
+      <br>
+      <code>
+Enter a year: 1900<br>
+1900 is not a leap year.<br>
+      </code>
+</div>
+A leap year is exactly divisible by 4 except for century years (years ending with 00). The century year is a leap year only if it is perfectly divisible by 400.
+</div>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,82 @@
+
+{% extends 'base.html' %}
+
+
+{% block title %} Swap Two Variables {% endblock %}
+{% block body%}
+<div class="container">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6">
+  <br>
+  <div class="list-group" style="max-width: 380px;">
+  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+    Python Example
+  </a>
+  <a href="{% url 'py' %}" class="list-group-item list-group-item-action">Print Hello world!</a>
+  <a href="{% url 'first' %}" class="list-group-item list-group-item-action">Add Two Numbers</a>
+  <a href="{% url 'addnum' %}"class="list-group-item list-group-item-action">Add Two Numbers With User Input</a>
+  <a href="{% url 'swap' %}" class="list-group-item list-group-item-action">Swap Two Variables</a>
+  <a href="{% url 'randomnum' %}" class="list-group-item list-group-item-action">Generate a Random Number</a>
+  <a href="{% url 'factno' %}" class="list-group-item list-group-item-action">Find the Factorial of a Number</a>
+  <a href="{% url 'prime' %}" class="list-group-item list-group-item-action">Check Prime Number</a>
+  <a href="{% url 'primeno' %}" class="list-group-item list-group-item-action">Print all Prime Numbers in an Interval</a>
+  <a href="{% url 'divi' %}" class="list-group-item list-group-item-action">Find Numbers Divisible by Another Number</a>
+  <a href="{% url 'ascii' %}" class="list-group-item list-group-item-action">Find ASCII Value of Character</a>
+  <a href="{% url 'areatri' %}" class="list-group-item list-group-item-action">Calculate the Area of a Triangle</a>
+  <a href="{% url 'armstrongnum' %}" class="list-group-item list-group-item-action">Check Armstrong Number</a>
+  <a href="{% url 'celsius' %}"class="list-group-item list-group-item-action">convert Celsuis to Fahrenheit</a>
+  <a href="{% url 'dectobin' %}" class="list-group-item list-group-item-action">Decimal to Binary, Octal and Hexadecimal</a>
+  <a href="{% url 'fib' %}" class="list-group-item list-group-item-action">Print the Fibonacci sequence</a>
+  <a href="{% url 'fpyramid' %}" class="list-group-item list-group-item-action">print full pyramid a using numbers</a>
+  <a href="{% url 'hpyramid' %}" class="list-group-item list-group-item-action">print half pyramid using *</a>
+  <a href="{% url 'kmtomi' %}" class="list-group-item list-group-item-action">Program to Convert Kilometers to Miles!</a>
+  <a href="{% url 'oddeven' %}" class="list-group-item list-group-item-action">Program to Check if a Number is Odd or Even</a>
+  <a href="{% url 'palindrome' %}" class="list-group-item list-group-item-action">Check Whether a String is Palindrome or Not</a>
+  <a href="{% url 'sortwords' %}" class="list-group-item list-group-item-action">Sort Words in Alphabetic Order</a>
+</div>
+    </div>
+<div class="col-lg-6">
+  <br>
+  <h2>Python Program to Swap Two Variables</h2>
+<br>
+In this example, you will learn to swap two variables by using a temporary variable and, without using temporary variable.
+    <div class="container- p-5 my-5 border" style="background-color:powderblue">
+      <strong>
+        Source code
+      </strong>
+      <br>
+      <code>
+# Python program to swap two variables<br>
+
+x = 5<br>
+y = 10<br>
+
+# To take inputs from the user<br>
+#x = input('Enter value of x: ')<br>
+#y = input('Enter value of y: ')<br>
+
+# create a temporary variable and swap the values<br>
+temp = x<br>
+x = y<br>
+y = temp<br>
+
+print('The value of x after swapping: {}'.format(x))<br>
+print('The value of y after swapping: {}'.format(y))<br>
+      </code><br>
+        <strong>
+            Output
+        </strong><br>
+<code>
+    The value of x after swapping: 10
+The value of y after swapping: 5
+</code>
+</div>
+In this program, we use the temp variable to hold the value of x temporarily. We then put the value of y in x and later temp in y. In this way, the values get exchanged.
+</div>
+</div>
+</div>
+</div>
+</div><br><br>
+
+{% endblock %}

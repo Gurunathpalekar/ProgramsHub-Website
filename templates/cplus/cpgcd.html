@@ -1,0 +1,100 @@
+
+{% extends 'base.html' %}
+
+
+{% block title %}GCD{% endblock %}
+{% block body%}
+<div class="container">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6">
+  <br>
+  <div class="list-group" style="max-width: 380px;">
+  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+    C++ Example
+  </a>
+  <a href="{% url 'cplus' %}" class="list-group-item list-group-item-action">Print Hello world!</a>
+  <a href="{% url 'cpadd' %}" class="list-group-item list-group-item-action">Add Two Numbers</a>
+  <a href="{% url 'cpnum' %}"class="list-group-item list-group-item-action">Print Number Entered by User</a>
+  <a href="{% url 'cpswap' %}" class="list-group-item list-group-item-action">Swap Two Variables</a>
+  <a href="{% url 'cpleap' %}" class="list-group-item list-group-item-action">Check Leap Year</a>
+  <a href="{% url 'factno' %}" class="list-group-item list-group-item-action">Find the Factorial of a Number</a>
+  <a href="{% url 'cpprime' %}" class="list-group-item list-group-item-action">Check Prime Number</a>
+  <a href="{% url 'cpmul' %}" class="list-group-item list-group-item-action">Multiply Two Numbers</a>
+  <a href="{% url 'cppyramid' %}" class="list-group-item list-group-item-action">Create Pyramid and Pattern</a>
+  <a href="{% url 'cpascii' %}" class="list-group-item list-group-item-action">Find ASCII Value of Character</a>
+  <a href="{% url 'cpeveorodd' %}" class="list-group-item list-group-item-action">Check Whether Number is Even or Odd</a>
+  <a href="{% url 'cpvoworcon' %}" class="list-group-item list-group-item-action"> Check Whether a character is Vowel or Consonant</a>
+  <a href="{% url 'larnum' %}" class="list-group-item list-group-item-action">Find Largest Number Among Three Numbers </a>
+  <a href="{% url 'cproot' %}" class="list-group-item list-group-item-action"> Find All Roots of a Quadratic Equation</a>
+  <a href="{% url 'cpnatnum' %}" class="list-group-item list-group-item-action"> Calculate Sum of Natural Numbers</a>
+  <a href="{% url 'cpmultab' %}" class="list-group-item list-group-item-action">Generate Multiplication Table </a>
+  <a href="{% url 'cpfibo' %}" class="list-group-item list-group-item-action">Display Fibonacci Series </a>
+  <a href="{% url 'cpgcd' %}" class="list-group-item list-group-item-action"> Find GCD</a>
+  <a href="{% url 'cplcm' %}" class="list-group-item list-group-item-action"> Find LCM</a>
+  <a href="{% url 'cprevnum' %}" class="list-group-item list-group-item-action">Reverse a Number </a>
+  <a href="{% url 'cparmst' %}" class="list-group-item list-group-item-action">Check Armstrong Number </a>
+</div>
+    </div>
+<div class="col-lg-6">
+  <br>
+  <h2>C++ Program to Find GCD</h2>
+<br>
+The largest integer which can perfectly divide two integers is known as GCD or HCF of those two numbers.
+    <div class="container- p-5 my-5 border" style="background-color:powderblue">
+      <strong>
+        Source code
+      </strong>
+      <br>
+      <code>
+        #include <iostream><br>
+            using namespace std;<br>
+            
+            int main() {<br>
+              int n1, n2, hcf;<br>
+              cout << "Enter two numbers: ";<br>
+              cin >> n1 >> n2;<br>
+            
+              // swapping variables n1 and n2 if n2 is greater than n1.<br>
+              if ( n2 > n1) { <br>
+                int temp = n2;<br>
+                n2 = n1;<br>
+                n1 = temp;<br>
+              }<br>
+                
+              for (int i = 1; i <=  n2; ++i) {<br>
+                if (n1 % i == 0 && n2 % i ==0) {<br>
+                  hcf = i;<br>
+                }<br>
+              }<br>
+            
+              cout << "HCF = " << hcf;<br>
+            
+              return 0;<br>
+            }
+
+      </code>
+      <br>
+      <br>
+  <strong>Output</strong>
+      <br>
+      <code>
+        Enter two numbers: 16<br>
+        76<br>
+        HCF = 4
+      </code>
+</div>
+The logic of this program is simple.<br>
+
+In this program, the smaller integer between n1 and n2 is stored in n2. Then the loop is iterated from i = 1 to i <= n2 and in each iteration, the value of i is increased by 1.<br>
+
+If both numbers are divisible by i then, that number is stored in variable hcf.<br>
+
+This process is repeated in each iteration. When the iteration is finished, HCF will be stored in variable hcf.
+</div>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}

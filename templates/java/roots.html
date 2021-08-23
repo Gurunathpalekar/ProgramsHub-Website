@@ -1,0 +1,107 @@
+
+{% extends 'base.html' %}
+
+
+{% block title %}  Roots of a Quadratic Equation {% endblock %}
+{% block body%}
+<div class="container">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6">
+  <br>
+  <div class="list-group" style="max-width: 380px;">
+  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+    Java Example
+  </a>
+   <a href="{% url 'java' %}" class="list-group-item list-group-item-action">Print Hello world!</a>
+  <a href="{% url 'add' %}" class="list-group-item list-group-item-action">Add Two Integers</a>
+  <a href="{% url 'swapnum' %}"class="list-group-item list-group-item-action">Swap Two Numbers</a>
+  <a href="{% url 'evenodd' %}" class="list-group-item list-group-item-action">Check Whether a Number is Even or Odd</a>
+  <a href="{% url 'vowel' %}" class="list-group-item list-group-item-action">Check Whether an Alphabet is Vowel or Consonant</a>
+  <a href="{% url 'mul' %}" class="list-group-item list-group-item-action"> Multiply two Floating Point Numbers</a>
+  <a href="{% url 'asciino' %}" class="list-group-item list-group-item-action">Find ASCII Value of a character</a>
+  <a href="{% url 'alphabet' %}" class="list-group-item list-group-item-action">Check Whether a Character is Alphabet or Not</a>
+  <a href="{% url 'fact' %}" class="list-group-item list-group-item-action">Find Factorial of a Number</a>
+  <a href="{% url 'positive' %}" class="list-group-item list-group-item-action">Check Whether a Number is Positive or Negative</a>
+  <a href="{% url 'larnum' %}" class="list-group-item list-group-item-action"> Find the Largest Among Three Numbers</a>
+  <a href="{% url 'roots' %}" class="list-group-item list-group-item-action"> Find all Roots of a Quadratic Equation</a>
+  <a href="{% url 'leapy' %}" class="list-group-item list-group-item-action">Check Leap Year </a>
+  <a href="{% url 'multab' %}" class="list-group-item list-group-item-action"> Generate Multiplication Table </a>
+  <a href="{% url 'fibo' %}" class="list-group-item list-group-item-action"> Display Fibonacci Series  </a>
+  <a href="{% url 'gcd' %}" class="list-group-item list-group-item-action">  Find GCD of two Numbers </a>
+  <a href="{% url 'lcm' %}" class="list-group-item list-group-item-action">  Find LCM of two Numbers </a>
+  <a href="{% url 'alph' %}" class="list-group-item list-group-item-action">  Display Alphabets (A to Z) using loop </a>
+  <a href="{% url 'countno' %}" class="list-group-item list-group-item-action">   Count Number of Digits in an Integer </a>
+  <a href="{% url 'palin' %}" class="list-group-item list-group-item-action"> Check Palindrome </a>
+</div>
+    </div>
+<div class="col-lg-6">
+  <br>
+  <h2>Java Program to Find all Roots of a Quadratic Equation</h2>
+<br>
+In this program, you'll learn to find all roots of a quadratic equation and print them using format() in Java.
+    <div class="container- p-5 my-5 border" style="background-color:powderblue">
+      <strong>
+        Source code
+      </strong>
+      <br>
+      <code>
+        public class Main {<br>
+
+            public static void main(String[] args) {<br>
+          
+              // value a, b, and c<br>
+              double a = 2.3, b = 4, c = 5.6;<br>
+              double root1, root2;<br>
+          
+              // calculate the determinant (b2 - 4ac)<br>
+              double determinant = b * b - 4 * a * c;<br>
+          
+              // check if determinant is greater than 0<br>
+              if (determinant > 0) {<br>
+          
+                // two real and distinct roots<br>
+                root1 = (-b + Math.sqrt(determinant)) / (2 * a);<br>
+                root2 = (-b - Math.sqrt(determinant)) / (2 * a);<br>
+          
+                System.out.format("root1 = %.2f and root2 = %.2f", root1, root2);<br>
+              }<br>
+          
+              // check if determinant is equal to 0<br>
+              else if (determinant == 0) {<br>
+          
+                // two real and equal roots<br>
+                // determinant is equal to 0<br>
+                // so -b + 0 == -b<br>
+                root1 = root2 = -b / (2 * a);<br>
+                System.out.format("root1 = root2 = %.2f;", root1);<br>
+              }<br>
+          
+              // if determinant is less than zero<br>
+              else {<br>
+          
+                // roots are complex number and distinct<br>
+                double real = -b / (2 * a);<br>
+                double imaginary = Math.sqrt(-determinant) / (2 * a);<br>
+                System.out.format("root1 = %.2f+%.2fi", real, imaginary);<br>
+                System.out.format("\nroot2 = %.2f-%.2fi", real, imaginary);<br>
+              }<br>
+            }<br>
+          }
+      </code>
+      <br>
+      <br>
+  <strong>Output</strong>
+      <br>
+      <code>
+        root1 = -0.87+1.30i and root2 = -0.87-1.30i
+      </code>
+</div>
+In the above program, the coefficients a, b, and c are set to 2.3, 4, and 5.6 respectively. Then, the determinant is calculated as b2 - 4ac.
+</div>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}

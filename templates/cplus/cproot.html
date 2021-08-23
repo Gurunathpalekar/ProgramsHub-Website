@@ -1,0 +1,108 @@
+
+{% extends 'base.html' %}
+
+
+{% block title %} All Roots of a Quadratic Equation {% endblock %}
+{% block body%}
+<div class="container">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6">
+  <br>
+  <div class="list-group" style="max-width: 380px;">
+  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+    C++ Example
+  </a>
+   <a href="{% url 'cplus' %}" class="list-group-item list-group-item-action">Print Hello world!</a>
+  <a href="{% url 'cpadd' %}" class="list-group-item list-group-item-action">Add Two Numbers</a>
+  <a href="{% url 'cpnum' %}"class="list-group-item list-group-item-action">Print Number Entered by User</a>
+  <a href="{% url 'cpswap' %}" class="list-group-item list-group-item-action">Swap Two Variables</a>
+  <a href="{% url 'cpleap' %}" class="list-group-item list-group-item-action">Check Leap Year</a>
+  <a href="{% url 'factno' %}" class="list-group-item list-group-item-action">Find the Factorial of a Number</a>
+  <a href="{% url 'cpprime' %}" class="list-group-item list-group-item-action">Check Prime Number</a>
+  <a href="{% url 'cpmul' %}" class="list-group-item list-group-item-action">Multiply Two Numbers</a>
+  <a href="{% url 'cppyramid' %}" class="list-group-item list-group-item-action">Create Pyramid and Pattern</a>
+  <a href="{% url 'cpascii' %}" class="list-group-item list-group-item-action">Find ASCII Value of Character</a>
+  <a href="{% url 'cpeveorodd' %}" class="list-group-item list-group-item-action">Check Whether Number is Even or Odd</a>
+  <a href="{% url 'cpvoworcon' %}" class="list-group-item list-group-item-action"> Check Whether a character is Vowel or Consonant</a>
+  <a href="{% url 'larnum' %}" class="list-group-item list-group-item-action">Find Largest Number Among Three Numbers </a>
+  <a href="{% url 'cproot' %}" class="list-group-item list-group-item-action"> Find All Roots of a Quadratic Equation</a>
+  <a href="{% url 'cpnatnum' %}" class="list-group-item list-group-item-action"> Calculate Sum of Natural Numbers</a>
+  <a href="{% url 'cpmultab' %}" class="list-group-item list-group-item-action">Generate Multiplication Table </a>
+  <a href="{% url 'cpfibo' %}" class="list-group-item list-group-item-action">Display Fibonacci Series </a>
+  <a href="{% url 'cpgcd' %}" class="list-group-item list-group-item-action"> Find GCD</a>
+  <a href="{% url 'cplcm' %}" class="list-group-item list-group-item-action"> Find LCM</a>
+  <a href="{% url 'cprevnum' %}" class="list-group-item list-group-item-action">Reverse a Number </a>
+  <a href="{% url 'cparmst' %}" class="list-group-item list-group-item-action">Check Armstrong Number </a>
+</div>
+    </div>
+<div class="col-lg-6">
+  <br>
+  <h2>C++ Program to Find All Roots of a Quadratic Equation</h2>
+<br>
+In this program, sqrt() library function is used to find the square root of a number.
+    <div class="container- p-5 my-5 border" style="background-color:powderblue">
+      <strong>
+        Source code
+      </strong>
+      <br>
+      <code>
+        #include <iostream><br>
+            #include <cmath><br>
+            using namespace std;<br>
+            
+            int main() {<br>
+            
+                float a, b, c, x1, x2, discriminant, realPart, imaginaryPart;<br>
+                cout << "Enter coefficients a, b and c: ";<br>
+                cin >> a >> b >> c;<br>
+                discriminant = b*b - 4*a*c;<br>
+                
+                if (discriminant > 0) {<br>
+                    x1 = (-b + sqrt(discriminant)) / (2*a);<br>
+                    x2 = (-b - sqrt(discriminant)) / (2*a);<br>
+                    cout << "Roots are real and different." << endl;<br>
+                    cout << "x1 = " << x1 << endl;<br>
+                    cout << "x2 = " << x2 << endl;<br>
+                }<br>
+                
+                else if (discriminant == 0) {<br>
+                    cout << "Roots are real and same." << endl;<br>
+                    x1 = -b/(2*a);<br>
+                    cout << "x1 = x2 =" << x1 << endl;<br>
+                }<br>
+            
+                else {<br>
+                    realPart = -b/(2*a);<br>
+                    imaginaryPart =sqrt(-discriminant)/(2*a);<br>
+                    cout << "Roots are complex and different."  << endl;<br>
+                    cout << "x1 = " << realPart << "+" << imaginaryPart << "i" << endl;<br>
+                    cout << "x2 = " << realPart << "-" << imaginaryPart << "i" << endl;<br>
+                }<br>
+            
+                return 0;<br>
+            } 
+            
+
+      </code>
+      <br>
+      <br>
+  <strong>Output</strong>
+      <br>
+      <code>
+        Enter coefficients a, b and c: 4<br>
+        5<br>
+        1<br>
+        Roots are real and different.<br>
+        x1 = -0.25<br>
+        x2 = -1<br>
+      </code>
+</div>
+This program accepts coefficients of a quadratic equation from the user and<br> displays the roots (both real and complex roots depending upon <br>the discriminant).
+</div>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}

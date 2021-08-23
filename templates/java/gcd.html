@@ -1,0 +1,89 @@
+
+{% extends 'base.html' %}
+
+
+{% block title %} GCD Of Number {% endblock %}
+{% block body%}
+<div class="container">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6">
+  <br>
+  <div class="list-group" style="max-width: 380px;">
+  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+    Java Example
+  </a>
+    <a href="{% url 'java' %}" class="list-group-item list-group-item-action">Print Hello world!</a>
+  <a href="{% url 'add' %}" class="list-group-item list-group-item-action">Add Two Integers</a>
+  <a href="{% url 'swapnum' %}"class="list-group-item list-group-item-action">Swap Two Numbers</a>
+  <a href="{% url 'evenodd' %}" class="list-group-item list-group-item-action">Check Whether a Number is Even or Odd</a>
+  <a href="{% url 'vowel' %}" class="list-group-item list-group-item-action">Check Whether an Alphabet is Vowel or Consonant</a>
+  <a href="{% url 'mul' %}" class="list-group-item list-group-item-action"> Multiply two Floating Point Numbers</a>
+  <a href="{% url 'asciino' %}" class="list-group-item list-group-item-action">Find ASCII Value of a character</a>
+  <a href="{% url 'alphabet' %}" class="list-group-item list-group-item-action">Check Whether a Character is Alphabet or Not</a>
+  <a href="{% url 'fact' %}" class="list-group-item list-group-item-action">Find Factorial of a Number</a>
+  <a href="{% url 'positive' %}" class="list-group-item list-group-item-action">Check Whether a Number is Positive or Negative</a>
+  <a href="{% url 'larnum' %}" class="list-group-item list-group-item-action"> Find the Largest Among Three Numbers</a>
+  <a href="{% url 'roots' %}" class="list-group-item list-group-item-action"> Find all Roots of a Quadratic Equation</a>
+  <a href="{% url 'leapy' %}" class="list-group-item list-group-item-action">Check Leap Year </a>
+  <a href="{% url 'multab' %}" class="list-group-item list-group-item-action"> Generate Multiplication Table </a>
+  <a href="{% url 'fibo' %}" class="list-group-item list-group-item-action"> Display Fibonacci Series  </a>
+  <a href="{% url 'gcd' %}" class="list-group-item list-group-item-action">  Find GCD of two Numbers </a>
+  <a href="{% url 'lcm' %}" class="list-group-item list-group-item-action">  Find LCM of two Numbers </a>
+  <a href="{% url 'alph' %}" class="list-group-item list-group-item-action">  Display Alphabets (A to Z) using loop </a>
+  <a href="{% url 'countno' %}" class="list-group-item list-group-item-action">   Count Number of Digits in an Integer </a>
+  <a href="{% url 'palin' %}" class="list-group-item list-group-item-action"> Check Palindrome </a>
+</div>
+    </div>
+<div class="col-lg-6">
+  <br>
+  <h2>Java Program to Find GCD of two Numbers</h2>
+<br>
+In this program, you'll learn to find GCD of two numbers in Kotlin. This is done by using for and while loops with the help of if else statements.
+    <div class="container- p-5 my-5 border" style="background-color:powderblue">
+      <strong>
+        Source code
+      </strong>
+      <br>
+      <code>
+        class Main {<br>
+            public static void main(String[] args) {<br>
+          
+              // find GCD between n1 and n2<br>
+              int n1 = 81, n2 = 153;<br>
+              
+              // initially set to gcd<br>
+              int gcd = 1;<br>
+          
+              for (int i = 1; i <= n1 && i <= n2; ++i) {<br>
+          
+                // check if i perfectly divides both n1 and n2<br>
+                if (n1 % i == 0 && n2 % i == 0)<br>
+                  gcd = i;<br>
+              }<br>
+          
+              System.out.println("GCD of " + n1 +" and " + n2 + " is " + gcd);<br>
+            }<br>
+          }
+          
+      </code>
+      <br>
+      <br>
+  <strong>Output</strong>
+      <br>
+      <code>
+        GCD of 81 and 153 is 9
+      </code>
+</div>
+Here, two numbers whose GCD are to be found are stored in n1 and n2 respectively.<br>
+
+Then, a for loop is executed until i is less than both n1 and n2. This way, all numbers between 1 and smallest of the two numbers are iterated to find the GCD.<br>
+
+If both n1 and n2 are divisble by i, gcd is set to the number. This goes on until it finds the largest number (GCD) which divides both n1 and n2 without remainder.
+</div>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,85 @@
+
+{% extends 'base.html' %}
+
+
+{% block title %}   Multiplication Table {% endblock %}
+{% block body%}
+<div class="container">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6">
+  <br>
+  <div class="list-group" style="max-width: 380px;">
+  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+    Java Example
+  </a>
+    <a href="{% url 'java' %}" class="list-group-item list-group-item-action">Print Hello world!</a>
+  <a href="{% url 'add' %}" class="list-group-item list-group-item-action">Add Two Integers</a>
+  <a href="{% url 'swapnum' %}"class="list-group-item list-group-item-action">Swap Two Numbers</a>
+  <a href="{% url 'evenodd' %}" class="list-group-item list-group-item-action">Check Whether a Number is Even or Odd</a>
+  <a href="{% url 'vowel' %}" class="list-group-item list-group-item-action">Check Whether an Alphabet is Vowel or Consonant</a>
+  <a href="{% url 'mul' %}" class="list-group-item list-group-item-action"> Multiply two Floating Point Numbers</a>
+  <a href="{% url 'asciino' %}" class="list-group-item list-group-item-action">Find ASCII Value of a character</a>
+  <a href="{% url 'alphabet' %}" class="list-group-item list-group-item-action">Check Whether a Character is Alphabet or Not</a>
+  <a href="{% url 'fact' %}" class="list-group-item list-group-item-action">Find Factorial of a Number</a>
+  <a href="{% url 'positive' %}" class="list-group-item list-group-item-action">Check Whether a Number is Positive or Negative</a>
+  <a href="{% url 'larnum' %}" class="list-group-item list-group-item-action"> Find the Largest Among Three Numbers</a>
+  <a href="{% url 'roots' %}" class="list-group-item list-group-item-action"> Find all Roots of a Quadratic Equation</a>
+  <a href="{% url 'leapy' %}" class="list-group-item list-group-item-action">Check Leap Year </a>
+  <a href="{% url 'multab' %}" class="list-group-item list-group-item-action"> Generate Multiplication Table </a>
+  <a href="{% url 'fibo' %}" class="list-group-item list-group-item-action"> Display Fibonacci Series  </a>
+  <a href="{% url 'gcd' %}" class="list-group-item list-group-item-action">  Find GCD of two Numbers </a>
+  <a href="{% url 'lcm' %}" class="list-group-item list-group-item-action">  Find LCM of two Numbers </a>
+  <a href="{% url 'alph' %}" class="list-group-item list-group-item-action">  Display Alphabets (A to Z) using loop </a>
+  <a href="{% url 'countno' %}" class="list-group-item list-group-item-action">   Count Number of Digits in an Integer </a>
+  <a href="{% url 'palin' %}" class="list-group-item list-group-item-action"> Check Palindrome </a>
+</div>
+    </div>
+<div class="col-lg-6">
+  <br>
+  <h2>Java Program to Generate Multiplication Table</h2>
+<br>
+In this program, you'll learn to generate multiplication table of a given number. This is done by using a for and a while loop in Java.
+    <div class="container- p-5 my-5 border" style="background-color:powderblue">
+      <strong>
+        Source code
+      </strong>
+      <br>
+      <code>
+        public class MultiplicationTable { <br>
+
+            public static void main(String[] args) { <br>
+        
+                int num = 5; <br>
+                for(int i = 1; i <= 10; ++i) <br>
+                { <br>
+                    System.out.printf("%d * %d = %d \n", num, i, num * i); <br>
+                } <br>
+            } <br>
+        }   
+      </code>
+      <br>
+      <br>
+  <strong>Output</strong>
+      <br>
+      <code>
+        5 * 1 = 5<br>
+        5 * 2 = 10<br>
+        5 * 3 = 15<br>
+        5 * 4 = 20<br>
+        5 * 5 = 25<br>
+        5 * 6 = 30<br>
+        5 * 7 = 35<br>
+        5 * 8 = 40<br>
+        5 * 9 = 45<br>
+        5 * 10 = 50 
+      </code>
+</div>
+it is better to use for loop in this case. It's because the number of iteration (from 1 to 10) is known
+</div>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}

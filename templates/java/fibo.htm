@@ -1,0 +1,82 @@
+
+{% extends 'base.html' %}
+
+
+{% block title %}Fibonacci Series {% endblock %}
+{% block body%}
+<div class="container">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6">
+  <br>
+  <div class="list-group" style="max-width: 380px;">
+  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+    Java Example
+  </a>
+    <a href="{% url 'java' %}" class="list-group-item list-group-item-action">Print Hello world!</a>
+  <a href="{% url 'add' %}" class="list-group-item list-group-item-action">Add Two Integers</a>
+  <a href="{% url 'swapnum' %}"class="list-group-item list-group-item-action">Swap Two Numbers</a>
+  <a href="{% url 'evenodd' %}" class="list-group-item list-group-item-action">Check Whether a Number is Even or Odd</a>
+  <a href="{% url 'vowel' %}" class="list-group-item list-group-item-action">Check Whether an Alphabet is Vowel or Consonant</a>
+  <a href="{% url 'mul' %}" class="list-group-item list-group-item-action"> Multiply two Floating Point Numbers</a>
+  <a href="{% url 'asciino' %}" class="list-group-item list-group-item-action">Find ASCII Value of a character</a>
+  <a href="{% url 'alphabet' %}" class="list-group-item list-group-item-action">Check Whether a Character is Alphabet or Not</a>
+  <a href="{% url 'fact' %}" class="list-group-item list-group-item-action">Find Factorial of a Number</a>
+  <a href="{% url 'positive' %}" class="list-group-item list-group-item-action">Check Whether a Number is Positive or Negative</a>
+  <a href="{% url 'larnum' %}" class="list-group-item list-group-item-action"> Find the Largest Among Three Numbers</a>
+  <a href="{% url 'roots' %}" class="list-group-item list-group-item-action"> Find all Roots of a Quadratic Equation</a>
+  <a href="{% url 'leapy' %}" class="list-group-item list-group-item-action">Check Leap Year </a>
+  <a href="{% url 'multab' %}" class="list-group-item list-group-item-action"> Generate Multiplication Table </a>
+  <a href="{% url 'fibo' %}" class="list-group-item list-group-item-action"> Display Fibonacci Series  </a>
+  <a href="{% url 'gcd' %}" class="list-group-item list-group-item-action">  Find GCD of two Numbers </a>
+  <a href="{% url 'lcm' %}" class="list-group-item list-group-item-action">  Find LCM of two Numbers </a>
+  <a href="{% url 'alph' %}" class="list-group-item list-group-item-action">  Display Alphabets (A to Z) using loop </a>
+  <a href="{% url 'countno' %}" class="list-group-item list-group-item-action">   Count Number of Digits in an Integer </a>
+  <a href="{% url 'palin' %}" class="list-group-item list-group-item-action"> Check Palindrome </a>
+</div>
+    </div>
+<div class="col-lg-6">
+  <br>
+  <h2>Java Program to Display Fibonacci Series</h2>
+<br>
+In this program, you'll learn to display the Fibonacci series in Java using for and while loops.
+    <div class="container- p-5 my-5 border" style="background-color:powderblue">
+      <strong>
+        Source code
+      </strong>
+      <br>
+      <code>
+        class Main {<br>
+            public static void main(String[] args) {<br>
+          
+              int n = 10, firstTerm = 0, secondTerm = 1;<br>
+              System.out.println("Fibonacci Series till " + n + " terms:");<br>
+          
+              for (int i = 1; i <= n; ++i) {<br>
+                System.out.print(firstTerm + ", ");<br>
+          
+                // compute the next term<br>
+                int nextTerm = firstTerm + secondTerm;<br>
+                firstTerm = secondTerm;<br>
+                secondTerm = nextTerm;<br>
+              }<br>
+            }<br>
+          }
+      </code>
+      <br>
+      <br>
+  <strong>Output</strong>
+      <br>
+      <code>
+        Fibonacci Series till 10 terms:<br>
+        0, 1, 1, 2, 3, 5, 8, 13, 21, 34,
+      </code>
+</div>
+In the above program, firstTerm and secondTerm are initialized with 0 and 1 respectively (first two digits of Fibonacci series).
+</div>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}

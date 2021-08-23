@@ -1,0 +1,85 @@
+
+{% extends 'base.html' %}
+
+
+{% block title %} Power Of Number {% endblock %}
+{% block body%}
+<div class="container">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6">
+  <br>
+  <div class="list-group" style="max-width: 380px;">
+  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+    C Example
+  </a>
+  <a href="{% url 'c' %}" class="list-group-item list-group-item-action">Print Hello world!</a>
+  <a href="{% url 'cadd' %}" class="list-group-item list-group-item-action">Add Two Numbers</a>
+  <a href="{% url 'cprint' %}"class="list-group-item list-group-item-action">Print an Integer</a>
+  <a href="{% url 'cswap' %}" class="list-group-item list-group-item-action">Swap Two Variables</a>
+  <a href="{% url 'cleap' %}" class="list-group-item list-group-item-action">Check Leap Year</a>
+  <a href="{% url 'cfactno' %}" class="list-group-item list-group-item-action">Find the Factorial of a Number</a>
+  <a href="{% url 'cprime' %}" class="list-group-item list-group-item-action">Check Prime Number</a>
+  <a href="{% url 'creverse' %}" class="list-group-item list-group-item-action">Reverse a Number</a>
+  <a href="{% url 'cpower' %}" class="list-group-item list-group-item-action">Power of Number</a>
+  <a href="{% url 'cascii' %}" class="list-group-item list-group-item-action">Find ASCII Value of Character</a>
+  <a href="{% url 'ceveorodd' %}" class="list-group-item list-group-item-action">Check Whether a Number is Even or Odd</a>
+  <a href="{% url 'cvoworcon' %}" class="list-group-item list-group-item-action">Check Whether a Character is a Vowel or Consonant</a>
+  <a href="{% url 'clarnum' %}" class="list-group-item list-group-item-action">Find the Largest Number Among Three Numbers</a>
+  <a href="{% url 'croot' %}" class="list-group-item list-group-item-action"> Find the Roots of a Quadratic Equation</a>
+  <a href="{% url 'cposorneg' %}" class="list-group-item list-group-item-action">Check Whether a Number is Positive or Negative </a>
+  <a href="{% url 'csumnatnum' %}" class="list-group-item list-group-item-action">Calculate the Sum of Natural Numbers</a>
+  <a href="{% url 'cmultable' %}" class="list-group-item list-group-item-action">Generate Multiplication Table</a>
+  <a href="{% url 'cfibo' %}" class="list-group-item list-group-item-action">Display Fibonacci Sequence</a>
+  <a href="{% url 'cgcd' %}" class="list-group-item list-group-item-action">Find GCD of two Numbers</a>
+  <a href="{% url 'clcm' %}" class="list-group-item list-group-item-action">Find LCM of two Numbers</a>
+  <a href="{% url 'cpal' %}" class="list-group-item list-group-item-action">Check Whether a Number is Palindrome or Not</a>
+</div>
+    </div>
+<div class="col-lg-6">
+  <br>
+  <h2>C Program to Calculate the Power of a Number</h2>
+<br>
+ In this example, you will learn to calculate the power of a number.
+    <div class="container- p-5 my-5 border" style="background-color:powderblue">
+      <strong>
+        Source code
+      </strong>
+      <br>
+      <code>
+     #include <stdio.h><br>
+int main() {<br>
+    int base, exp;<br>
+    long double result = 1.0;<br>
+    printf("Enter a base number: ");<br>
+    scanf("%d", &base);<br>
+    printf("Enter an exponent: ");<br>
+    scanf("%d", &exp);<br>
+
+    while (exp != 0) {<br>
+        result *= base;<br>
+        --exp;<br>
+    }<br>
+    printf("Answer = %.0Lf", result);<br>
+    return 0;<br>
+}<br>
+
+      </code>
+      <br>
+      <br>
+  <strong>Output</strong>
+      <br>
+      <code>
+Enter a base number: 3<br>
+Enter an exponent: 4<br>
+Answer = 81<br>
+      </code>
+</div>
+We can also use the pow() function to calculate the power of a number.
+</div>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}

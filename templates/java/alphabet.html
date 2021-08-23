@@ -1,0 +1,83 @@
+
+{% extends 'base.html' %}
+
+
+{% block title %} Alphabet or Not{% endblock %}
+{% block body%}
+<div class="container">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6">
+  <br>
+  <div class="list-group" style="max-width: 380px;">
+  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+    Java Example
+  </a>
+    <a href="{% url 'java' %}" class="list-group-item list-group-item-action">Print Hello world!</a>
+  <a href="{% url 'add' %}" class="list-group-item list-group-item-action">Add Two Integers</a>
+  <a href="{% url 'swapnum' %}"class="list-group-item list-group-item-action">Swap Two Numbers</a>
+  <a href="{% url 'evenodd' %}" class="list-group-item list-group-item-action">Check Whether a Number is Even or Odd</a>
+  <a href="{% url 'vowel' %}" class="list-group-item list-group-item-action">Check Whether an Alphabet is Vowel or Consonant</a>
+  <a href="{% url 'mul' %}" class="list-group-item list-group-item-action"> Multiply two Floating Point Numbers</a>
+  <a href="{% url 'asciino' %}" class="list-group-item list-group-item-action">Find ASCII Value of a character</a>
+  <a href="{% url 'alphabet' %}" class="list-group-item list-group-item-action">Check Whether a Character is Alphabet or Not</a>
+  <a href="{% url 'fact' %}" class="list-group-item list-group-item-action">Find Factorial of a Number</a>
+  <a href="{% url 'positive' %}" class="list-group-item list-group-item-action">Check Whether a Number is Positive or Negative</a>
+  <a href="{% url 'larnum' %}" class="list-group-item list-group-item-action"> Find the Largest Among Three Numbers</a>
+  <a href="{% url 'roots' %}" class="list-group-item list-group-item-action"> Find all Roots of a Quadratic Equation</a>
+  <a href="{% url 'leapy' %}" class="list-group-item list-group-item-action">Check Leap Year </a>
+  <a href="{% url 'multab' %}" class="list-group-item list-group-item-action"> Generate Multiplication Table </a>
+  <a href="{% url 'fibo' %}" class="list-group-item list-group-item-action"> Display Fibonacci Series  </a>
+  <a href="{% url 'gcd' %}" class="list-group-item list-group-item-action">  Find GCD of two Numbers </a>
+  <a href="{% url 'lcm' %}" class="list-group-item list-group-item-action">  Find LCM of two Numbers </a>
+  <a href="{% url 'alph' %}" class="list-group-item list-group-item-action">  Display Alphabets (A to Z) using loop </a>
+  <a href="{% url 'countno' %}" class="list-group-item list-group-item-action">   Count Number of Digits in an Integer </a>
+  <a href="{% url 'palin' %}" class="list-group-item list-group-item-action"> Check Palindrome </a>
+</div>
+    </div>
+<div class="col-lg-6">
+  <br>
+  <h2>Java Program to Check Whether a Character is Alphabet or Not</h2>
+<br>
+ In this program, you'll learn to check whether a given character is an alphabet or not. This is done using an if else statement or a ternary operator in Java.
+    <div class="container- p-5 my-5 border" style="background-color:powderblue">
+      <strong>
+        Source code
+      </strong>
+      <br>
+      <code>
+     public class Alphabet {<br>
+
+    public static void main(String[] args) {<br>
+
+        char c = '*';<br>
+
+        if( (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))<br>
+            System.out.println(c + " is an alphabet.");<br>
+        else<br>
+            System.out.println(c + " is not an alphabet.");<br>
+    }<br>
+}<br>
+      </code>
+      <br>
+      <br>
+  <strong>Output</strong>
+      <br>
+      <code>
+* is not an alphabet.
+      </code>
+</div>
+In Java, the char variable stores the ASCII value of a character (number between 0 and 127) rather than the character itself.<br>
+
+The ASCII value of lowercase alphabets are from 97 to 122. And, the ASCII value of uppercase alphabets are from 65 to 90. That is, alphabet a is stored as 97 and alphabet z is stored as 122. Similarly, alphabet A is stored as 65 and alphabet Z is stored as 90.<br>
+
+Now, when we compare variable c between 'a' to 'z' and 'A' to 'Z', the variable is compared with the ASCII value of the alphabets 97 to 122 and 65 to 90 respectively.<br>
+
+Since the ASCII value of * does not fall in between the ASCII value of alphabets. Hence, the program outputs * is not an alphabet.<br>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}

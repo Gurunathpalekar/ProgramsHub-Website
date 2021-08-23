@@ -1,0 +1,103 @@
+
+{% extends 'base.html' %}
+
+
+{% block title %} Vowel or Consonant {% endblock %}
+{% block body%}
+<div class="container">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6">
+  <br>
+  <div class="list-group" style="max-width: 380px;">
+  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+    C++ Example
+  </a>
+  <a href="{% url 'cplus' %}" class="list-group-item list-group-item-action">Print Hello world!</a>
+  <a href="{% url 'cpadd' %}" class="list-group-item list-group-item-action">Add Two Numbers</a>
+  <a href="{% url 'cpnum' %}"class="list-group-item list-group-item-action">Print Number Entered by User</a>
+  <a href="{% url 'cpswap' %}" class="list-group-item list-group-item-action">Swap Two Variables</a>
+  <a href="{% url 'cpleap' %}" class="list-group-item list-group-item-action">Check Leap Year</a>
+  <a href="{% url 'factno' %}" class="list-group-item list-group-item-action">Find the Factorial of a Number</a>
+  <a href="{% url 'cpprime' %}" class="list-group-item list-group-item-action">Check Prime Number</a>
+  <a href="{% url 'cpmul' %}" class="list-group-item list-group-item-action">Multiply Two Numbers</a>
+  <a href="{% url 'cppyramid' %}" class="list-group-item list-group-item-action">Create Pyramid and Pattern</a>
+  <a href="{% url 'cpascii' %}" class="list-group-item list-group-item-action">Find ASCII Value of Character</a>
+  <a href="{% url 'cpeveorodd' %}" class="list-group-item list-group-item-action">Check Whether Number is Even or Odd</a>
+  <a href="{% url 'cpvoworcon' %}" class="list-group-item list-group-item-action"> Check Whether a character is Vowel or Consonant</a>
+  <a href="{% url 'larnum' %}" class="list-group-item list-group-item-action">Find Largest Number Among Three Numbers </a>
+  <a href="{% url 'cproot' %}" class="list-group-item list-group-item-action"> Find All Roots of a Quadratic Equation</a>
+  <a href="{% url 'cpnatnum' %}" class="list-group-item list-group-item-action"> Calculate Sum of Natural Numbers</a>
+  <a href="{% url 'cpmultab' %}" class="list-group-item list-group-item-action">Generate Multiplication Table </a>
+  <a href="{% url 'cpfibo' %}" class="list-group-item list-group-item-action">Display Fibonacci Series </a>
+  <a href="{% url 'cpgcd' %}" class="list-group-item list-group-item-action"> Find GCD</a>
+  <a href="{% url 'cplcm' %}" class="list-group-item list-group-item-action"> Find LCM</a>
+  <a href="{% url 'cprevnum' %}" class="list-group-item list-group-item-action">Reverse a Number </a>
+  <a href="{% url 'cparmst' %}" class="list-group-item list-group-item-action">Check Armstrong Number </a>
+</div>
+    </div>
+<div class="col-lg-6">
+  <br>
+  <h2>C++ Program to Check Whether a character is Vowel or Consonant</h2>
+<br>
+In this example, if...else statement is used to check whether an alphabet entered by the user is a vowel or a constant.
+    <div class="container- p-5 my-5 border" style="background-color:powderblue">
+      <strong>
+        Source code
+      </strong>
+      <br>
+      <code>
+        #include <iostream><br>
+            using namespace std;<br>
+            
+            int main() {<br>
+                char c;<br>
+                bool isLowercaseVowel, isUppercaseVowel;<br>
+            
+                cout << "Enter an alphabet: ";<br>
+                cin >> c;<br>
+            
+                // evaluates to 1 (true) if c is a lowercase vowel<br>
+                isLowercaseVowel = (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u');<br>
+            
+                // evaluates to 1 (true) if c is an uppercase vowel<br>
+                isUppercaseVowel = (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U');<br>
+            
+                // show error message if c is not an alphabet<br>
+                if (!isalpha(c))<br>
+                  printf("Error! Non-alphabetic character.");<br>
+                else if (isLowercaseVowel || isUppercaseVowel)<br>
+                    cout << c << " is a vowel.";<br>
+                else<br>
+                    cout << c << " is a consonant.";<br>
+            
+                return 0;<br>
+            }   
+            
+
+      </code>
+      <br>
+      <br>
+  <strong>Output</strong>
+      <br>
+      <code>
+        Enter an alphabet: u<br>
+        u is a vowel.
+      </code>
+</div>
+The character entered by the user is stored in variable c.<br>
+
+The isLowerCaseVowel evaluates to true if c is a lowercase vowel and false for any other character.<br>
+
+Similarly, isUpperCaseVowel evaluates to true if c is an uppercase vowel and false for any other character.<br>
+
+If both isLowercaseVowel and isUppercaseVowel is true, the character entered is a vowel, if not the character is a consonant.<br>
+
+The isalpha() function checks whether the character entered is an alphabet or not. If it is not, it prints an error message
+</div>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}

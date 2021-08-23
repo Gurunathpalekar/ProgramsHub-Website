@@ -1,0 +1,103 @@
+
+{% extends 'base.html' %}
+
+
+{% block title %} Swap Two Number{% endblock %}
+{% block body%}
+<div class="container">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6">
+  <br>
+  <div class="list-group" style="max-width: 380px;">
+  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+    Java Example
+  </a>
+  <a href="{% url 'java' %}" class="list-group-item list-group-item-action">Print Hello world!</a>
+  <a href="{% url 'add' %}" class="list-group-item list-group-item-action">Add Two Integers</a>
+  <a href="{% url 'swapnum' %}"class="list-group-item list-group-item-action">Swap Two Numbers</a>
+  <a href="{% url 'evenodd' %}" class="list-group-item list-group-item-action">Check Whether a Number is Even or Odd</a>
+  <a href="{% url 'vowel' %}" class="list-group-item list-group-item-action">Check Whether an Alphabet is Vowel or Consonant</a>
+  <a href="{% url 'mul' %}" class="list-group-item list-group-item-action"> Multiply two Floating Point Numbers</a>
+  <a href="{% url 'asciino' %}" class="list-group-item list-group-item-action">Find ASCII Value of a character</a>
+  <a href="{% url 'alphabet' %}" class="list-group-item list-group-item-action">Check Whether a Character is Alphabet or Not</a>
+  <a href="{% url 'fact' %}" class="list-group-item list-group-item-action">Find Factorial of a Number</a>
+  <a href="{% url 'positive' %}" class="list-group-item list-group-item-action">Check Whether a Number is Positive or Negative</a>
+  <a href="{% url 'larnum' %}" class="list-group-item list-group-item-action"> Find the Largest Among Three Numbers</a>
+  <a href="{% url 'roots' %}" class="list-group-item list-group-item-action"> Find all Roots of a Quadratic Equation</a>
+  <a href="{% url 'leapy' %}" class="list-group-item list-group-item-action">Check Leap Year </a>
+  <a href="{% url 'multab' %}" class="list-group-item list-group-item-action"> Generate Multiplication Table </a>
+  <a href="{% url 'fibo' %}" class="list-group-item list-group-item-action"> Display Fibonacci Series  </a>
+  <a href="{% url 'gcd' %}" class="list-group-item list-group-item-action">  Find GCD of two Numbers </a>
+  <a href="{% url 'lcm' %}" class="list-group-item list-group-item-action">  Find LCM of two Numbers </a>
+  <a href="{% url 'alph' %}" class="list-group-item list-group-item-action">  Display Alphabets (A to Z) using loop </a>
+  <a href="{% url 'countno' %}" class="list-group-item list-group-item-action">   Count Number of Digits in an Integer </a>
+  <a href="{% url 'palin' %}" class="list-group-item list-group-item-action"> Check Palindrome </a>
+</div>
+    </div>
+<div class="col-lg-6">
+  <br>
+  <h2>Java Program to Swap Two Numbers</h2>
+<br>
+ In this program, you'll learn two techniques to swap two numbers in Java. The first one uses a temporary variable for swapping, while the second one doesn't use any temporary variables.
+    <div class="container- p-5 my-5 border" style="background-color:powderblue">
+      <strong>
+        Source code
+      </strong>
+      <br>
+      <code>
+     public class SwapNumbers {<br>
+
+    public static void main(String[] args) {<br>
+
+        float first = 1.20f, second = 2.45f;<br>
+
+        System.out.println("--Before swap--");<br>
+        System.out.println("First number = " + first);<br>
+        System.out.println("Second number = " + second);<br>
+
+        // Value of first is assigned to temporary<br>
+        float temporary = first;<br>
+
+        // Value of second is assigned to first<br>
+        first = second;<br>
+
+        // Value of temporary (which contains the initial value of first) is assigned to second<br>
+        second = temporary;<br>
+
+        System.out.println("--After swap--");<br>
+        System.out.println("First number = " + first);<br>
+        System.out.println("Second number = " + second);<br>
+    }<br>
+}<br>
+      </code>
+      <br>
+      <br>
+  <strong>Output</strong>
+      <br>
+      <code>
+--Before swap--<br>
+First number = 1.2<br>
+Second number = 2.45<br>
+--After swap--<br>
+First number = 2.45<br>
+Second number = 1.2<br>
+      </code>
+</div>
+In the above program, two numbers 1.20f and 2.45f which are to be swapped are stored in variables: first and second respectively.<br>
+
+The variables are printed before swapping using println() to see the results clearly after swapping is done.<br>
+
+First, the value of first is stored in variable temporary (temporary = 1.20f).<br>
+Then, value of second is stored in first (first = 2.45f).<br>
+And, finally value of temporary is stored in second (second = 1.20f).<br>
+This completes the swapping process and the variables are printed on the screen.<br>
+
+Remember, the only use of temporary is to hold the value of first before swapping. You can also swap the numbers without using temporary.<br>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}
